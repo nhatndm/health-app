@@ -1,3 +1,4 @@
 export const common = {
-  home: 'Home'
+  home: 'Home',
+  clickHereToLogin: 'Click Here To Login'
 };

@@ -1,4 +1,6 @@
 export const Router = {
   Home: '/',
-  Login: '/login'
+  Login: '/login',
+  News: '/news',
+  MyRecord: '/my-record'
 };

@@ -6,11 +6,16 @@ import { AppRoute } from 'routes';
 // LAYOUT
 import Header from 'components/layout/header';
 
+// STYLES
+import { ContainerWrapper } from './App.styles';
+
 function App() {
   return (
     <>
       <Header />
-      <AppRoute />
+      <ContainerWrapper>
+        <AppRoute />
+      </ContainerWrapper>
     </>
   );
 }
