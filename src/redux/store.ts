@@ -1,12 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 
-// TYPE
-import { RootState } from './type';
+// REDUCER
+import appReducer from './app/slice';
 
-export const reducer = combineReducers({});
-
-export const initialAppState: Omit<RootState, 'router'> = {};
+export const reducer = combineReducers({
+  app: appReducer
+});
 
 export const store = configureStore({
   reducer,
