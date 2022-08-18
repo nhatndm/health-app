@@ -1,3 +1,6 @@
 export const Domain = {
-  App: 'app'
+  App: 'app',
+  Diary: 'diary',
+  Exercise: 'exercise',
+  Record: 'record'
 };
