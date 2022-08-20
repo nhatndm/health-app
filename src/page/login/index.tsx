@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Router } from 'constant';
 
 // COMPONENTS
-import Button from 'components/button';
+import Button from 'components/atoms/button';
 
 // HOOKS
 import { useAppDispatch } from 'hooks/redux';

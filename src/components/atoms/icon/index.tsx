@@ -7,10 +7,11 @@ interface IProps {
   IconComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   text?: string;
   onClick?: () => void;
+  nonFlex?: boolean;
 }
 
-const Icon: FC<IProps> = ({ IconComponent, text = '', onClick }) => (
-  <IconWrapper haveOnClick={!!onClick} onClick={onClick}>
+const Icon: FC<IProps> = ({ IconComponent, text = '', onClick, nonFlex }) => (
+  <IconWrapper haveOnClick={!!onClick} nonFlex={nonFlex} onClick={onClick}>
     <IconComponent />
     {text.length > 0 && <TextWrapper className="icon-text">{text}</TextWrapper>}
   </IconWrapper>

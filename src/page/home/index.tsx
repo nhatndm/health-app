@@ -1,10 +1,32 @@
 import React, { FC } from 'react';
+import { Grid } from '@mui/material';
 
 // COMPONENTS
-import CircularProgressWithLabel from 'components/circle-progress-bar';
+import CircularProgressWithLabel from 'components/atoms/circle-progress-bar';
+
+// STYLE
+import { MyProgressWrapper } from './styles';
+
+// VIEWS
+import Menu from 'view/menu';
+import Chart from 'view/chart';
 
 const HomePage: FC = () => {
-  return <CircularProgressWithLabel value={75} />;
+  return (
+    <Grid container columnSpacing={0} rowSpacing={3}>
+      <Grid item md={4} xs={12}>
+        <MyProgressWrapper>
+          <CircularProgressWithLabel value={75} />
+        </MyProgressWrapper>
+      </Grid>
+      <Grid item md={8} xs={12}>
+        <Chart />
+      </Grid>
+      <Grid item xs={12}>
+        <Menu />
+      </Grid>
+    </Grid>
+  );
 };
 
 export default HomePage;

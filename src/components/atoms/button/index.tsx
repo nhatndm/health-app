@@ -4,7 +4,7 @@ import React, { FC, MouseEvent, ReactNode } from 'react';
 import { ButtonWrapper } from './styles';
 
 interface IProps {
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
 }
 

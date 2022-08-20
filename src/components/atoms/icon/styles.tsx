@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { StyledTheme } from 'theme';
 
-export const IconWrapper = styled.div<{ haveOnClick?: boolean }>`
-  display: flex;
+export const IconWrapper = styled.div<{ haveOnClick?: boolean; nonFlex?: boolean }>`
+  display: ${(props) => (props.nonFlex ? 'block' : 'flex')};
   align-items: center;
 
   &:hover {

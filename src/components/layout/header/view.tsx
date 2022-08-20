@@ -11,7 +11,7 @@ import { ReactComponent as Challenge } from 'assets/svg/icon_challenge.svg';
 import { ReactComponent as News } from 'assets/svg/icon_info.svg';
 
 // COMPONENTS
-import Icon from 'components/icon';
+import Icon from 'components/atoms/icon';
 
 // ROUTER
 import { Router } from 'constant';
