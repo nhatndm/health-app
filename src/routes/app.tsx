@@ -36,14 +36,7 @@ export const AppRoute: FC = () => {
         }
         path={Router.Home}
       />
-      <Route
-        element={
-          <RequireAuth>
-            <NewsPage />
-          </RequireAuth>
-        }
-        path={Router.News}
-      />
+      <Route element={<NewsPage />} path={Router.News} />
       <Route
         element={
           <RequireAuth>

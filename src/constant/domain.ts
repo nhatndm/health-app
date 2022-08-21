@@ -3,5 +3,6 @@ export const Domain = {
   Diary: 'diary',
   Exercise: 'exercise',
   Record: 'record',
-  Menu: 'menu'
+  Menu: 'menu',
+  New: 'new'
 };

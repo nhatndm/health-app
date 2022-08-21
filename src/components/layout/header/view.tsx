@@ -74,8 +74,8 @@ const Header: FC<IProps> = ({ isAuthenticated }) => {
       </Popper>
       <Container>
         <Grid container alignItems="center" rowGap={2}>
-          <Grid item sm={5} xs={12}>
-            <Icon IconComponent={Logo} />
+          <Grid item sm={isAuthenticated ? 5 : 3} xs={12}>
+            <Icon IconComponent={Logo} onClick={() => handleClickItem(Router.Home)} />
           </Grid>
           <Grid item sm={2} xs={12}>
             {isAuthenticated && (
@@ -94,6 +94,11 @@ const Header: FC<IProps> = ({ isAuthenticated }) => {
           <Grid item sm={2} xs={12}>
             <Icon IconComponent={News} text={locale('news')} onClick={() => handleClickItem(Router.News)} />
           </Grid>
+          {!isAuthenticated && (
+            <Grid item sm={2} xs={12}>
+              <Icon IconComponent={News} text={locale('login')} onClick={() => handleClickItem(Router.Login)} />
+            </Grid>
+          )}
           <Grid item sm={1} xs={12}>
             <HamburgerIconWrapper>
               <HamburgerIcon

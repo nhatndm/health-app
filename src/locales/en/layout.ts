@@ -6,5 +6,6 @@ export const layout = {
   target: 'Target',
   course: 'Course',
   list: 'List',
-  setting: 'Setting'
+  setting: 'Setting',
+  login: 'Login'
 };

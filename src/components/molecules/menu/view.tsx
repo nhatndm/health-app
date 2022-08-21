@@ -6,10 +6,10 @@ import { MenuItem } from 'model';
 // STYLE
 import { MenuDateWrapper, MenuItemWrapper } from './styles';
 
-const View: FC<Omit<MenuItem, 'id'>> = ({ when, date, image }) => (
+const View: FC<Omit<MenuItem, 'id' | 'when'> & { when?: string }> = ({ when, date, image }) => (
   <MenuItemWrapper backgroundImage={image}>
     <MenuDateWrapper>
-      {date} {when.toLowerCase().replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())}
+      {date} {when?.toLowerCase().replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())}
     </MenuDateWrapper>
   </MenuItemWrapper>
 );

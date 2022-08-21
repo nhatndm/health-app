@@ -6,5 +6,6 @@ export const layout = {
   target: '目標',
   course: '選択中のコース',
   list: 'コラム一覧',
-  setting: '設定'
+  setting: '設定',
+  login: 'Login'
 };

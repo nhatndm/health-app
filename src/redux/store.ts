@@ -7,13 +7,15 @@ import diaryReducer from './diary/slice';
 import exerciseReducer from './exercises/slice';
 import recordReducer from './record/slice';
 import menuReducer from './menu/slice';
+import newReducer from './news/slice';
 
 export const reducer = combineReducers({
   app: appReducer,
   diary: diaryReducer,
   exercise: exerciseReducer,
   record: recordReducer,
-  menu: menuReducer
+  menu: menuReducer,
+  new: newReducer
 });
 
 export const store = configureStore({
