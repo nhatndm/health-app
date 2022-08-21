@@ -3,6 +3,7 @@ import { StyledTheme } from 'theme';
 
 export const MenuItemWrapper = styled.div<{ backgroundImage: string }>`
   background-image: ${(props) => `url(${props.backgroundImage})`};
+  background-position: center;
   position: relative;
   height: 200px;
 `;

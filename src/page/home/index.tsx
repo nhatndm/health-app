@@ -13,7 +13,7 @@ import Chart from 'view/chart';
 
 const HomePage: FC = () => {
   return (
-    <Grid container columnSpacing={0} rowSpacing={3}>
+    <Grid container columnSpacing={0} rowGap={3}>
       <Grid item md={4} xs={12}>
         <MyProgressWrapper>
           <CircularProgressWithLabel value={75} />

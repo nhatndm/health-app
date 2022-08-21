@@ -27,9 +27,9 @@ const Menu: FC = () => {
   }, [dispatch]);
 
   return (
-    <Grid container rowSpacing={3}>
+    <Grid container rowGap={3}>
       <Grid item xs={12}>
-        <Grid container columnSpacing={1} rowSpacing={1}>
+        <Grid container columnSpacing={1} rowGap={1}>
           <Grid container item justifyContent="center" sm={3} xs={6}>
             <Hexagon>
               <Icon nonFlex IconComponent={KnifeLogo} />
@@ -57,7 +57,7 @@ const Menu: FC = () => {
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <Grid container columnSpacing={1} rowSpacing={1}>
+        <Grid container columnSpacing={1} rowGap={1}>
           {menus.map((v) => (
             <Grid key={v.id} item md={3} sm={6} xs={12}>
               <MenuItem date={v.date} image={v.image} when={v.when} />

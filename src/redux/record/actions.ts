@@ -9,7 +9,7 @@ import { RecordType } from 'model';
 // MOCK DATA
 import { MockRecordsByDay, MockRecordsByWeek, MockRecordsByMonth } from 'data';
 
-const { setMyRecords } = recordSlice.actions;
+const { setMyRecords, setRecordType } = recordSlice.actions;
 
 const getMyRecords =
   (recordType: RecordType): AppThunk =>
@@ -27,4 +27,4 @@ const getMyRecords =
     }
   };
 
-export { getMyRecords };
+export { getMyRecords, setRecordType };

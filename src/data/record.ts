@@ -42,37 +42,37 @@ const MockRecordsByWeek: RecordItem[] = [
   {
     id: 1,
     label: 'Mon',
-    data: 100
+    data: 110
   },
   {
     id: 2,
     label: 'Tue',
-    data: 300
+    data: 390
   },
   {
     id: 3,
     label: 'Web',
-    data: 500
+    data: 200
   },
   {
     id: 4,
     label: 'Thur',
-    data: 350
+    data: 850
   },
   {
     id: 5,
     label: 'Fri',
-    data: 800
+    data: 100
   },
   {
     id: 6,
     label: 'Sat',
-    data: 200
+    data: 300
   },
   {
     id: 7,
     label: 'Sun',
-    data: 500
+    data: 910
   }
 ];
 
@@ -80,62 +80,62 @@ const MockRecordsByMonth: RecordItem[] = [
   {
     id: 1,
     label: 'Jan',
-    data: 100
+    data: 190
   },
   {
     id: 2,
     label: 'Feb',
-    data: 300
+    data: 310
   },
   {
     id: 3,
     label: 'Mar',
-    data: 500
+    data: 290
   },
   {
     id: 4,
     label: 'Apr',
-    data: 350
+    data: 550
   },
   {
     id: 5,
     label: 'May',
-    data: 800
+    data: 990
   },
   {
     id: 6,
     label: 'June',
-    data: 200
+    data: 120
   },
   {
     id: 7,
     label: 'July',
-    data: 500
+    data: 510
   },
   {
     id: 8,
     label: 'Aug',
-    data: 550
+    data: 590
   },
   {
     id: 9,
     label: 'Sep',
-    data: 700
+    data: 710
   },
   {
     id: 10,
     label: 'Oct',
-    data: 800
+    data: 780
   },
   {
     id: 11,
     label: 'Nov',
-    data: 750
+    data: 650
   },
   {
     id: 12,
     label: 'Dec',
-    data: 100
+    data: 990
   }
 ];
 

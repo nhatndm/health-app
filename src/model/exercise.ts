@@ -1,8 +1,8 @@
 import { BaseSlice } from './base';
 
 export enum DurationType {
-  SECOND = 'SECOND',
-  MINUTES = 'MINUTES',
+  SECOND = 'SEC',
+  MINUTES = 'MIN',
   HOUR = 'HOUR'
 }
 

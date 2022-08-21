@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { StyledTheme } from 'theme';
 
-export const ChartWrapper = styled.div`
-  height: 316px;
-  background-color: ${(props: StyledTheme) => props.theme.dark[600]};
+export const ChartWrapper = styled.div<{ height?: number; color?: string }>`
+  height: ${(props) => (props.height ? `${props.height}px` : '316px')};
+  background-color: ${(props) => (props.color ? props.color : props.theme.dark[600])};
 `;

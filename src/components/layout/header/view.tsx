@@ -73,7 +73,7 @@ const Header: FC<IProps> = ({ isAuthenticated }) => {
         )}
       </Popper>
       <Container>
-        <Grid container alignItems="center" rowSpacing={2}>
+        <Grid container alignItems="center" rowGap={2}>
           <Grid item sm={5} xs={12}>
             <Icon IconComponent={Logo} />
           </Grid>

@@ -12,6 +12,13 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { ChartWrapper } from './styles';
+import { useLocation } from 'react-router-dom';
+
+// CONSTANT
+import { Router } from 'constant';
+
+// MODEL
+import { RecordType } from 'model';
 
 // REDUX
 import { useAppDispatch, useAppSelector } from 'hooks/redux';
@@ -20,7 +27,12 @@ import { selectRecordLabel, selectRecordData, selectRecordType } from 'redux/rec
 
 ChartJS.register(CategoryScale, Filler, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-export const options = {
+interface IProps {
+  customHeight?: number;
+  color?: string;
+}
+
+const options = {
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -36,15 +48,21 @@ export const options = {
   }
 };
 
-const View: FC = () => {
+const View: FC<IProps> = ({ customHeight, color }) => {
   const dispatch = useAppDispatch();
   const labels = useAppSelector(selectRecordLabel);
   const recordsData = useAppSelector(selectRecordData);
   const recordType = useAppSelector(selectRecordType);
+  const location = useLocation();
+  const pathName = location.pathname;
 
   useEffect(() => {
-    dispatch(getMyRecords(recordType));
-  }, [dispatch, recordType]);
+    if (pathName === Router.Home) {
+      dispatch(getMyRecords(RecordType.DAY));
+    } else {
+      dispatch(getMyRecords(recordType));
+    }
+  }, [dispatch, recordType, pathName]);
 
   const data = useMemo(() => {
     return {
@@ -60,7 +78,7 @@ const View: FC = () => {
   }, [labels, recordsData]);
 
   return (
-    <ChartWrapper>
+    <ChartWrapper color={color} height={customHeight}>
       <Line data={data} options={options} />
     </ChartWrapper>
   );

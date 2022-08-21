@@ -1,5 +1,6 @@
 export const common = {
   home: 'Home',
   clickHereToLogin: 'Click Here To Login',
-  loadMoreRecords: 'Load more records'
+  loadMoreRecords: 'Load more records',
+  loadMoreDiaries: 'Load more diaries'
 };
